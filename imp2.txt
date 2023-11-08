@@ -1,0 +1,61 @@
+after we ran - npm install 
+npx create-next-app@latest ./ 
+
+remeber we installed , tailwind , alias and app router 
+and this is the folder structure 
+
+app 
+node_modules 
+public 
+.gitignore 
+jsconfig.json 
+next.config.js
+package-lock.json 
+package.json 
+postcss.config.json 
+tailwind.config.js
+
+
+then we will run 
+npx install bcrypt mongodb next-auth 
+
+which we are gonna use to hash passwords 
+mongodb for our database and mongoose 
+and finally we gonna have next-auth 
+
+remember we are addin  bcrypt mongodb next-auth 
+
+
+now we delete the app directory 
+
+
+goto root(1.NEXTJS)  and we will create that by myself and name it app also we will create models , and components directory.
+models is gonna be for databases like mongodb , mongoose.
+
+then also delete the public  and create styles , utils and finally a last file which is gonna be .env(inside which we will simply store secure keys ).
+
+and this is what the updated file is gonna look like - 
+
+app 
+components 
+node_modules 
+public 
+styles 
+.env
+.gitignore
+jsconfig.json 
+next.config.js
+package-lock.json 
+package.json 
+postcss.config.js
+readme.md 
+tailwind.config.js 
+
+now go to jist of the github and make the files and paste the code . 
+the globals.css goes within the styles 
+then wewe downloaded the zip folder of assests and created 
+a page.jsx in the app (which is going to render our home page ).
+
+then we go and create the layout.jsx inside the app .
+
+

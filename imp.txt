@@ -1,0 +1,276 @@
+yt-js mastery-video 1 
+////////////////////////////////////////////////////////////////////////////
+
+the first important question is , 
+what does next js have that react does not have ? 
+
+
+in simple words next js simplifies the development proecess and also optimizes your apps 
+it soes that through its primary features  ,
+first in the list is , 
+1. rendering 
+it all begins with rendering process , the primary distinction between react js and next js is how they handle rendering 
+react renders ui at client side while next js performs server side rendering and also it gives you options whether you 
+want to render at client or server .
+now what is clent side and serer side rendering is and which one is better .
+
+the client side rendering or browser rendering happens on the clients device or in the browser 
+means when the user request the webpage the server sends the html nd js then the browser downloads them which leads to 
+rendering of the components and finally displays the website  . 
+
+whle the server side rendering means rendering the webpage on the  server  before  transmitting it to the clients device 
+when a user reuest the page sever processes the request and renders the components at the server side . the server then sends 
+back the fully rendered html  to the clients browser results in immediate disply .
+
+this distinction highlights an  essential aspect of we dev ,
+seo (serch engine optimization )  
+
+search engine crawlers face difficulties indexing pages dynamically rendered on the client side as a result 
+the seo performance may suffer as serch engines may not fully comprehend their content and rank them appropiately 
+but by utiliing next js this issue is resolved by sending pre rendered code directly to the client this enables easy 
+crawling , indexing by search ingines  leading to imroved seo . 
+
+
+but why should i prioritize seo ?
+seo is crucial for optimizing  a website's visibility and ranking  in search engine results .
+byfocusing on seo yoou can achieve several benefits , including 
+increased organic traffic 
+enhanced user experience 
+credibility and trustworthiness 
+competitive advantage due ti higher search result .
+it can grst;y impact the success of your website and its online presence .
+
+
+the second great next js feature is routing 
+ok so how do we create different page routes in react , we have to install an additional package 
+called react router dom then create routes in one of the files thats 
+ok 
+
+but hot how do we create routes in next js 
+next js uses file based routing  hwich means that the routing is handled by the file system 
+each folder in an app directory becomes a route and teh folder name becomes the route path . 
+no need for external packages or complex configuration . 
+
+
+
+anothere huge next js feature is flexibility to create full stak application ,
+from next js version 9 the developers behinf next introducesa a new features called api routes 
+enablnig the creation of serverless functions to handle api requests ,
+serverless apis in next js area a way of creating api endpoints , without the need for traditional server .
+
+thus ,
+it allows us to build and deploy apis  
+without managing server infrastructure or 
+worrying about your scaling of your server as the traffic increases .
+with thi sfeature , we can create api endpoints by simply creating a file called route.js 
+in a specific folder withon the app directory snf this fiel in the any route segment of app directly 
+corresponds to that route api  . 
+
+
+
+it is proved that  moving from the typical react express webpack backend to next js
+resulted in removing 20,000 plus lines of code in thirty plus dependencies , while improving 
+hot module reloading from 1.3s to 131 ms which is 10 times less , 
+
+
+the next feature is automatic code splitting ,
+code splitting is  a technique that breakes down the large bundles of js code into smaller , more managable chunks that can 
+be loaded as needed . (thats the keywor here when needed ) this reduces the initial load tiime of a website 
+and optimizes the user's experience while browsing , while we ccan achieve the web splitting in react the process is 
+manual we have to do  a lots of configuration as your application grows . for example we need to use the lazy function 
+in react to dynamically import the component only when its needed , like suspense etc. 
+but in next js this procss is entirely automatic no need for any code it uses automatic code splitting by default 
+to seperate pages into seperate chunks  means when a user navigates to the page only the code required for that 
+page is loaded resulting in faster subsequent page navigations , 
+
+
+so what's the takeaway?
+
+frontend development has gone through arious advancements in the areas like 
+linting
+formatting 
+compiling 
+bundling 
+minifying 
+deploying 
+and many more and however to avoid the time spent configuring these tools develoers felt a need  fora framework that 
+would take care of most of the proces automatically , leaving hen to concentrate on the actual code , thats where next js 
+comes in 
+which 
+automates most of the remaining processes 
+and  letting us focus on building the essential business logic of the application . 
+
+
+so for the end next js is the final advantage . 
+
+but remember is not a new technology its still fundamentally built on react . 
+the purpose is to simplify certain tasks sllowing develoers t o concentrate on the cpre . 
+and it also manages the vaariety of code in react like 
+routing 
+code splitting  
+serch engine optimization 
+rendering automatically 
+
+this automation saves a considarable a,ount of time ,
+making it easier to build a react app . to put it simply next is simply an extension of react 
+that strream lines the development process by automating several functions . 
+//////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+part 2 -what we are gonna use 
+
+////////////////////////////////////////////////////////////////////////////
+
+lets start with 
+
+npx create-next-app@latest ./ 
+its gonna ask ,
+
+√ Would you like to use TypeScript? ... No / Yes
+√ Would you like to use ESLint? ... No / Yes
+√ Would you like to use Tailwind CSS? ... No / Yes
+√ Would you like to use `src/` directory? ... No / Yes
+√ Would you like to use App Router? (recommended) ... No / Yes
+√ Would you like to customize the default import alias (@/*)? ... No / Yes
+(well why we said yes to the alias , well alias's are shortcuts that are refer to a module or a file using custom name instead of its dull path 
+this can help simplify and clarify your code  especially when you xworking with complex file structures )
+√ What import alias would you like configured? ... @/*
+
+so note that we have created this app using tailwind , alias and app router 
+
+we have not used typescript , eslint .. 
+
+and its gonna look like ,
+ Creating a new Next.js app in C:\Users\rekha\OneDrive\Desktop\1.nextjs.
+
+Using npm.
+
+Initializing project with template: app-tw
+
+
+Installing dependencies:
+- react
+- react-dom
+- next
+
+Installing devDependencies:
+- autoprefixer
+- postcss
+- tailwindcss
+
+
+and the project is noe=w ready , 
+so here the folder structure will look like 
+
+app 
+node_modules 
+public 
+.gitignore 
+jsconfig.json 
+next.config.js
+package-lock.json 
+package.json 
+postcss.config.json 
+tailwind.config.js
+
+lets deep dive into the next js application 
+
+app - its the most important folder in next js ,
+it has page.js and layout.js and globals.css 
+
+the layout.js is the main entry point of the application 
+all the component are wrapped within it are as its children . 
+as a result anything you type here is gonna be displayed . 
+
+its also the commo layout /template for all the pages .
+
+to know more go to layouts page of next js 
+
+next importnt file is page.js 
+it simply represents the home page route of the application .
+
+next globals.css  it containes the global css styles 
+there are two environments where your application code can be rendered . the client and the server .
+remember by default all the components created in the next within the app folder are react server components 
+which means thhat next js levarages server side rendering  to enhance the initial page loading speed resulting
+in  improved seo and user experience . 
+
+incase you wanna turn that server side to client side you have y=to add the "use client" at the top of the page.js 
+
+yah think that ,
+if there is not a "use client" present then it is the server side component . 
+so to turn it into client side component use "use client" when ever you are using/utilizing states or hooks
+likke useState or hooks or other client side management olutions  , it is important to declare the component 
+as a  client side component  , statte management in react is primilarily handled oon the clent side 
+where the compnent state is managed and updated withing the  browser so if yu aare using any react hooks 
+any thing similar yu need to add the useClient otherwise it goo-nna give errors . 
+
+so when should i use server components and when dhould i transform them into client ones ?
+
+thanfully next js documentation has answers just that question 
+long story short just keep  doing ehat you are doing when you have an error just transform 
+it into a useclient component . 
+
+now lets focus on nextjs routing system all i need to do is ,
+to create a folder corresponding to the deisred route within the app 
+the name of the folder will serve as the route name , for instance 
+
+lets say you wanna create a /user route simply navigate 
+to teh app folder create the new folder called user hten within it 
+simply create a new - page.js - 
+which means we can not name the files randomly means every file names has a different meaning 
+like route.js , error.js,layout.js etc. 
+
+out of the box , next js 
+
+
+
+
+1.get - retrives  data or resources from the server . 
+2. post - submits data to the server  to create a new resource . 
+3. put - updates or replaces an existing resource on the server . 
+4. patch- partially updates an existing resource on the server .
+5. delete - removes a specific resource from the server .
+6. head - reteives the headers of a resource without fetching its body .
+7. options - retrives the supported http metheods and other commution  options for a resource .
+
+now how to improve seo of your application 
+
+recently next js has allications also introduced their metadata api , 
+provided us two ways to of managing metadata static and dynamic to modify the metadata in a static way we 
+have , 
+we can define metadata in two ways static and dynamic .
+1. static metadata 
+2. synamic metadata 
+
+
+and ith that we can conclude this next js creah course 
+now we understad next js structure client and server components routing layout loading 
+errors , data fetching and api endpoints we are ready to implement all of them . 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
